@@ -1,0 +1,164 @@
+/* General Body and Container Styling */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Netlify uses Inter or a similar sans-serif font */
+    background-color: #f7f9fc; /* Light grey background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Make sure it takes full viewport height */
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Max width to mimic Netlify's layout */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Header (Netlify Logo) */
+.header {
+    margin-bottom: 50px; /* Space below the logo */
+    text-align: center;
+}
+
+.netlify-logo {
+    height: 24px; /* Maintain aspect ratio based on original height */
+    width: auto;
+}
+
+/* Main Login Section */
+.login-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 40px 30px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.login-section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Authentication Buttons */
+.auth-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between buttons */
+    margin-bottom: 30px;
+}
+
+.auth-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.auth-button i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Specific button styles for icons */
+.auth-button.github i { color: #24292e; /* GitHub brand color */ }
+.auth-button.gitlab i { color: #e24329; /* GitLab brand color */ }
+.auth-button.bitbucket i { color: #2684ff; /* Bitbucket brand color */ }
+
+.auth-button:hover {
+    background-color: #f7f7f7;
+    border-color: #d0d0d0;
+}
+
+/* Alternative Login Links */
+.alternative-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.alt-link {
+    color: #007bff; /* Standard link blue */
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.alt-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Sign Up Section */
+.signup-section {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #666;
+}
+
+.signup-section p {
+    margin-bottom: 10px;
+}
+
+.signup-link {
+    color: #007bff; /* Standard link blue */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.signup-link:hover {
+    color: #0056b3;
+}
+
+/* Footer (Netlify Bot Logo) */
+.footer {
+    margin-top: 50px; /* Space above the bot logo */
+    text-align: center;
+}
+
+.netlify-bot-logo {
+    height: 32px;
+    width: auto;
+    opacity: 0.8; /* Slight transparency to match the image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .login-section {
+        padding: 30px 20px;
+    }
+
+    .login-section h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .auth-button {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+
+    .alt-link, .signup-section p, .signup-link {
+        font-size: 14px;
+    }
+}
